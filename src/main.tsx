@@ -10,6 +10,7 @@ import {
 
 import App from './App';
 import Greeting from './page/Greeting';
+import theme from './Theme';
 
 const root = document.querySelector('#root');
 
@@ -28,7 +29,7 @@ const router = createBrowserRouter(
 
 ReactDOM.createRoot(root).render(
   <React.StrictMode>
-    <ChakraProvider>
+    <ChakraProvider theme={theme}>
       <RouterProvider router={router} />
     </ChakraProvider>
   </React.StrictMode>,

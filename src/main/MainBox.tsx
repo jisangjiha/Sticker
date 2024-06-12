@@ -1,20 +1,21 @@
-import { Container, Box, Link as ChakraLink } from '@chakra-ui/react';
+import { Button, Container, Box, Link as ChakraLink } from '@chakra-ui/react';
 import { Link as ReactRouterLink } from 'react-router-dom';
 
 export default function MainBox() {
   return (
     <Container
       h="auto"
-      minH="calc(100vh - 8rem)"
+      flex={1}
       paddingBottom={12}
       maxW="2xl"
-      bg="skyblue"
+      bg="bgPurple.100"
       centerContent
     >
       <Box>main</Box>
       <ChakraLink as={ReactRouterLink} to="/greeting">
-        greeting
+        greetings
       </ChakraLink>
+      <Button>button</Button>
     </Container>
   );
 }
