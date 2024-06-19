@@ -16,6 +16,9 @@ export default function MainBox() {
         greetings
       </ChakraLink>
       <Button>button</Button>
+      <ChakraLink as={ReactRouterLink} to="/githublist">
+        go to LIST
+      </ChakraLink>
     </Container>
   );
 }

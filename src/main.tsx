@@ -9,6 +9,7 @@ import {
 } from 'react-router-dom';
 
 import App from './App';
+import GithubList from './page/GithubList';
 import Greeting from './page/Greeting';
 import theme from './Theme';
 
@@ -23,6 +24,7 @@ const router = createBrowserRouter(
     <>
       <Route path="/" element={<App />} />
       <Route path="/greeting" element={<Greeting />} />
+      <Route path="/githublist" element={<GithubList />} />
     </>,
   ),
 );
