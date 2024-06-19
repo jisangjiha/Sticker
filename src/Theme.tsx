@@ -1,4 +1,6 @@
 import { extendTheme } from '@chakra-ui/react';
+import '@fontsource/open-sans';
+import '@fontsource/raleway';
 
 const theme = extendTheme({
   styles: {
@@ -12,9 +14,12 @@ const theme = extendTheme({
       },
     },
   },
+  fonts: {
+    '#root': `'Open Sans'`,
+  },
   colors: {
     bgPurple: { 100: '#D1D2F9' },
-    bgBlue: { 100: '#A3BCF9', 200: '#7796CB' },
+    bgBlue: { 100: '#A3BCF9', 200: '#7796CB', 300: '#B9C0DA' },
   },
   components: {
     Button: {
