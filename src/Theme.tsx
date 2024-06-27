@@ -15,11 +15,12 @@ const theme = extendTheme({
     },
   },
   fonts: {
-    '#root': `'Open Sans'`,
+    body: `'Open Sans', sans-serif`,
   },
   colors: {
     bgPurple: { 100: '#D1D2F9' },
-    bgBlue: { 100: '#A3BCF9', 200: '#7796CB', 300: '#B9C0DA' },
+    bgBlue: { 200: '#7796CB', 300: '#B9C0DA', 400: '#A3BCF9', 700: '#576490' },
+    bgGray: { 100: '#E4E7F1' },
   },
   components: {
     Button: {
