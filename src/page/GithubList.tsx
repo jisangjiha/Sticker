@@ -1,9 +1,9 @@
-import IssueList from '../components/IssueList';
+import IssueListItem from '../components/IssueList';
 
 export default function GithubList() {
   return (
     <>
-      <IssueList />
+      <IssueListItem />
     </>
   );
 }
