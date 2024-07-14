@@ -1,29 +1,47 @@
-import { Tooltip, Container, Box } from '@chakra-ui/react';
+import { Stack } from '@chakra-ui/react';
 
-import OpenIcon from '../icons/Open';
+import IssueListItem from './IssueListItem';
 
 export default function IssueList() {
   return (
-    <Tooltip label="content">
-      <Container
-        border="1px"
-        borderRadius="lg"
-        padding="8px 16px"
-        display="flex"
-        justifyContent="space-between"
-        alignItems="center"
-      >
-        <Box w="40px" display="flex" justifyContent="center">
-          <OpenIcon />
-        </Box>
-        <Box w="100%" padding="8px">
-          <Box>타이틀</Box>
-          <Box>작성자/작성일/#</Box>
-        </Box>
-        <Box w="40px" textAlign="center">
-          댓글
-        </Box>
-      </Container>
-    </Tooltip>
+    <Stack as="ul" direction="column" gap={4}>
+      <IssueListItem
+        tooltip="Summary We're enhancing user experience and data accessibility with new CSV export fu…"
+        title="타이틀1"
+        owner="github"
+        repository="roadmap"
+        author="github-product-roadmap"
+        createdDate="21 Jun 2024"
+        createdNum={989}
+      />
+      <IssueListItem
+        tooltip="contents"
+        title="타이틀2"
+        owner="owner"
+        repository="repository"
+        author="author2"
+        createdDate="21 Jun 2024"
+        createdNum={825}
+        commentsCount={5}
+      />
+      <IssueListItem
+        tooltip="contents"
+        title="타이틀3"
+        owner="owner"
+        repository="repository"
+        author="author3"
+        createdDate="21 Jun 2024"
+        createdNum={825}
+      />
+      <IssueListItem
+        tooltip="contents"
+        title="타이틀4"
+        owner="owner"
+        repository="repository"
+        author="author4"
+        createdDate="21 Jun 2024"
+        createdNum={825}
+      />
+    </Stack>
   );
 }
