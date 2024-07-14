@@ -1,29 +1,23 @@
-import { ViewIcon, ViewOffIcon, ChatIcon } from '@chakra-ui/icons';
+import { ViewIcon, ChatIcon } from '@chakra-ui/icons';
 import { Tooltip, Container, Box, Link } from '@chakra-ui/react';
-import { useState } from 'react';
+
+import type { Issue } from '../types';
 
 interface IssueListItemProps {
-  tooltip: string;
-  title: string;
-  commentsCount?: number;
-  owner: string;
-  repository: string;
-  author: string;
-  createdDate: string;
-  createdNum: number;
+  issue: Issue;
 }
 
-export default function IssueListItem({
-  tooltip,
-  title,
-  commentsCount,
-  owner,
-  repository,
-  author,
-  createdDate,
-  createdNum,
-}: IssueListItemProps) {
-  const [status, setStatus] = useState(true); //상태에 따라 아이콘 다르게 보여지도록
+export default function IssueListItem({ issue }: IssueListItemProps) {
+  const {
+    tooltip,
+    title,
+    commentsCount,
+    owner,
+    repository,
+    author,
+    createdDate,
+    issueNumber,
+  } = issue;
 
   return (
     /** td class=d-block comment-body markdown-body  js-comment-body */
@@ -39,7 +33,7 @@ export default function IssueListItem({
         bg="bgGray.100"
       >
         <Box w="40px" display="flex" justifyContent="center">
-          {status ? <ViewIcon /> : <ViewOffIcon />}
+          {<ViewIcon />}
         </Box>
         <Box w="100%" padding="8px">
           <Box>
@@ -65,10 +59,10 @@ export default function IssueListItem({
           </Box>
           <Box fontSize="12">
             <Link
-              href={`http://github.com/${owner}/${repository}/issues/${createdNum}`}
+              href={`http://github.com/${owner}/${repository}/issues/${issueNumber}`}
               margin="0 2px 0 0 "
             >
-              #{createdNum}
+              #{issueNumber}
             </Link>
             created on {createdDate} by
             <Link href={`http://github.com/${author}`} margin="0 2px">
