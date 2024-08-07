@@ -9,3 +9,10 @@ export interface Issue {
   issueNumber: number;
   commentsCount?: number;
 }
+
+export interface Pagination {
+  total: number;
+  limit: number;
+  page: number;
+  setPage: ;
+}
