@@ -20,7 +20,13 @@ export default function IssueList() {
 
   return (
     <>
-      <Stack as="ul" direction="column" gap={4} h={`${LIST_HEIGHT}px`}>
+      <Stack
+        as="ul"
+        direction="column"
+        gap={4}
+        h={`${LIST_HEIGHT}px`}
+        marginBottom={4}
+      >
         {ISSUE_LIST.slice(offset, offset + LIMIT).map((issue) => (
           <IssueListItem key={issue.id} issue={issue} />
         ))}
